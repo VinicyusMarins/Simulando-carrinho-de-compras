@@ -1,3 +1,10 @@
+export{
+    addItem,
+    createItem,
+    removeItem,
+    deleteItem
+}
+
 //criar um item
 async function createItem(name, value, quantity) {
     return {
@@ -17,12 +24,5 @@ async function removeItem(userCart, item) {
 }
 //deletar item
 async function deleteItem(userCart, item) {
-    
-}
-
-export{
-    addItem,
-    createItem,
-    removeItem,
-    deleteItem
+    userCart.splice(item);
 }
