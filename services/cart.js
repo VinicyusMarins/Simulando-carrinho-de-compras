@@ -14,7 +14,7 @@ async function displayCart(userCart) {
 async function calcularTotal(userCart) {
     let total = 0;
     for (const i in userCart) {
-        total += userCart[i].subtotal();
+        total += await userCart[i].subtotal();
     }
 
     return total.toFixed(2).replace(".",",");
